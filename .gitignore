@@ -1,0 +1,12 @@
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.backup
+terraform/.terraform.lock.hcl
+
+# Variables sensibles
+terraform/terraform.tfvars
+
+# Python
+__pycache__/
+*.pyc
