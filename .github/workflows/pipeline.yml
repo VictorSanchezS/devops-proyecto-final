@@ -43,6 +43,11 @@ jobs:
         run: terraform init
         working-directory: terraform
 
+      - name: Terraform Import Resource Group
+        run: terraform import azurerm_resource_group.rg /subscriptions/4acd162c-9d6e-41c1-aa72-3479a25b0c3a/resourceGroups/devops-proyecto-final-rg
+        working-directory: terraform
+        continue-on-error: true
+
       - name: Terraform Apply
         run: terraform apply -auto-approve
         working-directory: terraform
