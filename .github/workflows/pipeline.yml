@@ -62,6 +62,11 @@ jobs:
         working-directory: terraform
         continue-on-error: true
 
+      - name: Terraform Import ACR
+        run: terraform import azurerm_container_registry.acr /subscriptions/4acd162c-9d6e-41c1-aa72-3479a25b0c3a/resourceGroups/devops-proyecto-final-rg/providers/Microsoft.ContainerRegistry/registries/devopsvictor2026
+        working-directory: terraform
+        continue-on-error: true
+
       - name: Terraform Apply
         run: terraform apply -auto-approve
         working-directory: terraform
